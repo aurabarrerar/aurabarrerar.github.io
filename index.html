@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FREE TACO</title>
 </head>
 <body>
     <map name="imagemap">
         <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!">
     </map>
-    <a href="congratulations.html">
-        <img src="freetacoimage.jpg" alt="FREE taco" width="500">
-<map name="imagemap">
-  <area shape="circle" coords="807,911,35" href="congratulations.html" alt="CONGRATULATIONS!">
-</map>
-
-    </a>
+    <img src="freetacoimage.jpg" alt="FREE taco" usemap="#imagemap">
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('area').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default action (e.g., following the href)
+                window.location.href = 'congratulations.html'; // Redirect to the desired URL
+            });
+        });
+    </script>
 </body>
 </html>
