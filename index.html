@@ -20,16 +20,14 @@
 </head>
 <body>
     <map name="imagemap">
-        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!">
+        <area id="clickableArea" shape="circle" coords="807,911,35" alt="CONGRATULATIONS!">
     </map>
     <img src="freetacoimage.jpg" alt="FREE taco" width="1080" height="1050" usemap="#imagemap">
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('area').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default action (e.g., following the href)
-                window.location.href = 'congratulations.html'; // Redirect to the desired URL
-            });
+        document.getElementById('clickableArea').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default action (e.g., following the href)
+            window.location.href = 'congratulations.html'; // Redirect to the desired URL
         });
     </script>
 </body>
