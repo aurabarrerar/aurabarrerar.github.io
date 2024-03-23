@@ -14,23 +14,16 @@
         img {
             max-width: 100%; /* Ensure image fits within the viewport */
             height: auto; /* Maintain aspect ratio */
-            pointer-events: none; /* Disable pointer events on the image to allow interaction with areas */
+        }
+        img[usemap] {
+            pointer-events: none; /* Disable pointer events on the image with usemap attribute */
         }
     </style>
 </head>
 <body>
     <map name="imagemap">
-        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!">
+        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!" href="congratulations.html">
     </map>
     <img src="freetacoimage.jpg" alt="FREE taco" usemap="#imagemap">
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('area').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default action (e.g., following the href)
-                window.location.href = 'congratulations.html'; // Redirect to the desired URL
-            });
-        });
-    </script>
 </body>
 </html>
