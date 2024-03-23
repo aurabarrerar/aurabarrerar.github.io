@@ -7,16 +7,10 @@
 </head>
 <body>
     <map name="imagemap">
-        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!" href="congratulations.html">
+        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!">
     </map>
-    <img src="freetacoimage.jpg" alt="FREE taco" usemap="#imagemap">
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('area').addEventListener('click', function(event) {
-                // No need to prevent default action
-            });
-        });
-    </script>
+    <a href="congratulations.html">
+        <img src="freetacoimage.jpg" alt="FREE taco" usemap="#imagemap">
+    </a>
 </body>
 </html>
