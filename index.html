@@ -4,26 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>FREE TACO</title>
-        <style>
-        img {
-            max-width: 100%; /* Ensure image does not exceed viewport width */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensure proper spacing */
-            margin: 0 auto; /* Center the image */
-        }
-    </style>
 </head>
 <body>
     <map name="imagemap">
-        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!">
+        <area shape="circle" coords="807,911,35" alt="CONGRATULATIONS!" href="congratulations.html">
     </map>
     <img src="freetacoimage.jpg" alt="FREE taco" usemap="#imagemap">
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('area').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default action (e.g., following the href)
-                window.location.href = 'congratulations.html'; // Redirect to the desired URL
+                // No need to prevent default action
             });
         });
     </script>
